@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Usuario
+from django.template import loader
 # Create your views here.
 from django.http import HttpResponse
 
@@ -22,6 +23,14 @@ def grabarUsuario(request):
 	u = Usuario(nombre_usuario = nombre, apellido_usuario = apellido, rut_usuario = rut, comuna_usuaro = comuna, lugar_trabajo = trabajo)
 	u.save();
 	return render(request, 'aplicacion/grabar-usuario.html',{'nombre' : nombre},{'apellido' : apellido})
+
+def buscarUsuarios(request):
+	listadoUsuarios = Usuario.objects.all()
+	template = loader.get_template('aplicacion/buscar-usuarios.html')
+	context = {
+		'usuarios' : listadoUsuarios,
+	}
+	return HttpResponse(template.render(context, request))
 
 def seguirUsuario(request):
 	return render(request, 'aplicacion/seguir-usuario.html')	

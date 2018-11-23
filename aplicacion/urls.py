@@ -8,5 +8,5 @@ urlpatterns = [
     path('inicio/formulario', views.cargarFormulario, name='cargarFormulario'),
     path('inicio/grabar-usuario', views.grabarUsuario, name='grabarUsuario'),
     path('inicio/seguir', views.seguirUsuario, name='seguirUsuario}'),
-
+    path('inicio/buscar', views.buscarUsuarios, name='buscarUsuarios')
 ]

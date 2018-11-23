@@ -27,7 +27,15 @@
 		<section>
 			<div class="row center-xs">
 				<div  class="col col-xs-12">
-					
+					{% if usuarios %}
+					    <ul id="listado">
+					    {% for u in usuarios %}
+					        <li><a>{{ u.nombre }}</a></li>
+					    {% endfor %}
+					    </ul>
+					{% else %}
+					    <p>No hay Usuarios Registrados .</p>
+					{% endif %}
 				</div>
 			</div>
 		</section>	
