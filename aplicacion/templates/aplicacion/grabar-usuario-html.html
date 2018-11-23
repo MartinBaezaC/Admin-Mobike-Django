@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+	<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+	<title>Agregar usuario</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="row center-xs">
+				<div class="col col-xs-12
+								col-sm-12
+				            	col-md-12
+				            	col-lg-12">
+					<div class="boxHeader">
+						<h1 class="header">
+							Mobike Administración
+						</h1>					
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="row center-xs">
+				<div class="col col-xs-12">
+					<h2>Se ingreso a usuario {{nombre}}</h2>
+				</div>
+			</div>
+		</section>	
+		<section>
+			<div class="row center-xs">
+				<div class="col col-lg-12">
+					<a class="aNav" href="/aplicacion/inicio">Volver</a>
+				</div>
+			</div>
+		</section>	
+		<footer>
+			<div class="row start-xs">
+				<div class="box">
+					<p id="footer">Mobike Administración</p>
+					<br/>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

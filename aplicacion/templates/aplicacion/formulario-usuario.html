@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+	<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+	<title>Agregar usuario</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="row center-xs">
+				<div class="col col-xs-12
+								col-sm-12
+				            	col-md-12
+				            	col-lg-12">
+					<div class="boxHeader">
+						<h1 class="header">
+							Mobike Administración
+						</h1>					
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="row center-xs">
+				<div id="formularioUsuario" class="col col-xs-12">
+					<form class="formUsuario" method="post" action="/aplicacion/inicio/grabar-usuario">
+						{% csrf_token %}
+						Nombre:<input type="text" name="txtNombre" required placeholder="Ej: Eduardo"><br/>
+						Apellido:<input type="text" name="txtApellido" required placeholder="Ej: Gómez"><br/>
+						Rut:<input type="text" name="txtRut" required placeholder="Ej: 18746234-2"><br/>
+						Comuna:<input type="text" name="txtComuna" required placeholder="Ej: La Reina"><br/>
+						Lugar de trabajo:<input type="text" name="txtTrabajo" placeholder="Ej: Príncipe de gales, la reina"><br/>
+						<center><button type="submit" id="btnRegistrar" value="Registrar">Registrar</button></center>						
+					</form>
+				</div>
+			</div>
+		</section>	
+		<section>
+			<div class="row center-xs">
+				<div class="col col-lg-12">
+					<a class="aNav" href="/aplicacion/inicio">Volver</a>
+				</div>
+			</div>
+		</section>	
+		<footer>
+			<div class="row start-xs">
+				<div class="box">
+					<p id="footer">Mobike Administración</p>
+					<br/>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

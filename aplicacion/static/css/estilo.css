@@ -1,0 +1,55 @@
+body{	
+	font-family: tahoma;
+	background: #FAAC58;
+}
+.container{
+	background-color: orange;
+}
+
+.header{
+	color : white;
+	border: groove 6px;
+	border-radius: 12px;
+}
+
+.aNav{	
+	display: grid;
+	background-color: gray;	
+	padding: 12px ;
+	text-decoration: none;
+	display: inline-block;	
+	color :	white;
+	margin: 12px;	
+}
+
+.aNav:hover, .aNav:active{
+	background-color: #cc6600;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	border-radius: 12px;	    
+}
+
+footer{
+	background: gray;
+}
+
+#footer{
+	opacity: 0.5;
+	margin-left: 12px;
+}
+.formUsuario{
+	margin: 12px;
+}
+#formularioUsuario{
+	border: solid;
+	border-radius: 12px;
+	text-align: left;
+	margin: 24px;
+}
+
+#btnGuardar{
+	margin: 12px;
+}
